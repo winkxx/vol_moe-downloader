@@ -24,11 +24,11 @@ jobs:
     - name: RUN
       run: |
         mv app.py run.py
-        mv requirements.txt requirements.txt
+        mv requirements.txt requirement.txt
         chmod -R 777 run.py
         chmod -R 777 requirements.txt
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r requirement.txt
     - name: RUN
       run: |
         python run.py
