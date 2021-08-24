@@ -20,7 +20,7 @@ jobs:
     - name: PIP
       run: |
         git clone https://github.com/winkxx/vol_moe-downloader
-        cd ~/vol_moe-downloader
+        cd /home/runner/vol_moe-downloader
         pip install -r requirements.txt
     - name: downloads
       run: |
@@ -28,7 +28,7 @@ jobs:
         mkdir -p ~/downloads
     - name: RUN
       run: |
-        cd ~/vol_moe-downloader
+        cd /home/runner/vol_moe-downloader
         python3 app.py
 
 
