@@ -17,19 +17,22 @@ jobs:
       with:
           retain_days: 2
           keep_minimum_runs: 6
-    - name: PIP
-      run: |
-        git clone https://github.com/winkxx/vol_moe-downloader
     - name: downloads
       run: |
-        cd /home/runner/vol_moe-downloader
-        pip install -r requirements.txt
         cd ~/
         mkdir -p ~/downloads
     - name: RUN
       run: |
-        cd /home/runner/vol_moe-downloader
-        python3 app.py
+        mv app.py run.py
+        mv requirements.txt requirements.txt
+        chmod -R 777 run.py
+        chmod -R 777 requirements.txt
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: RUN
+      run: |
+        python run.py
+        
 
 
 
