@@ -13,7 +13,11 @@ jobs:
       with:
           retain_days: 2
           keep_minimum_runs: 6
-    - name: Rclone Install
+    - name: PIP
+      run: |
+        apt-get update
+        apt-get install -y python3-bs4
+    - name: downloads
       run: |
         cd ~/
         git clone https://github.com/winkxx/vol_moe-downloader
