@@ -15,6 +15,7 @@ jobs:
           keep_minimum_runs: 6
     - name: PIP
       run: |
+        sudo -i
         apt-get update
         apt-get install -y python3-bs4
     - name: downloads
