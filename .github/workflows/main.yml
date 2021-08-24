@@ -1,0 +1,29 @@
+name: download-promax
+#自动更新trcker版本----最大16G
+on:
+  gollum
+  #workflow_dispatch: # 手动触发
+jobs:
+  AutoDownloaderProcess:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2.1.0
+    - name: Delete workflow runs
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+          retain_days: 2
+          keep_minimum_runs: 6
+    - name: Rclone Install
+      run: |
+        cd ~/
+        git clone https://github.com/winkxx/vol_moe-downloader
+        mkdir -p ~/downloads
+    - name: RUN
+      run: |
+        cd ~/vol_moe-downloader
+        python3 app.py
+
+
+
+        
+ 
