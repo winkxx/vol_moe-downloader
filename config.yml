@@ -1,12 +1,12 @@
 account:
-  VOLSKEY: ""
-  VOLSESS: ""
-  VLIBSID: ""
+  VOLSKEY: "ffd57cbfe638080ea286858db8b0d0c1162978481310550978"
+  VOLSESS: "1629784865"
+  VLIBSID: "5kpeoe0tbu58u60u47vn63n464"
 
 ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36"
 
 type: "epub"
 
-download_path: "./download"
+download_path: "~/downloads"
 
-daily_limit: 99999
+daily_limit: 3000
