@@ -19,7 +19,7 @@ jobs:
           keep_minimum_runs: 6
     - name: PIP
       run: |
-        apt-get install -y python3-bs4
+        pip install beautifulsoup4
     - name: downloads
       run: |
         cd ~/
